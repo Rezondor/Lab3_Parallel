@@ -36,25 +36,6 @@ namespace Lab3
             else
                 Console.WriteLine("Неверный размер матриц");
             
-
-
-            /*for (int i = 0; i < newMatrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < newMatrix.GetLength(1); j++)
-                {
-                    int sum = 0;
-                    for (int k = 0; k < matrix1.GetLength(1); k++)
-                    {
-                       
-                        sum += matrix1[i, k] * matrix2[k, j];
-                    }
-                    newMatrix[i, j] = sum;
-                }
-            }
-            */
-
-
-
         }
     }
     
