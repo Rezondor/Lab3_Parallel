@@ -133,5 +133,25 @@ namespace Lab3_Core
 
             return MultiplyMatrix;
         }
+        static public int[,] MultiplyMatrix_Only3(int[,] matrix1, int[,] matrix2)
+        {
+            int[,] MultiplyMatrix = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+
+            for (int i = 0; i < MultiplyMatrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < MultiplyMatrix.GetLength(1);j++)
+                {
+                    int sum = 0;
+                    Parallel.For(0, matrix1.GetLength(1), k =>
+                    {
+
+                        sum += matrix1[i, k] * matrix2[k, j];
+                    });
+
+                    MultiplyMatrix[i, j] = sum;
+                }
+            }
+            return MultiplyMatrix;
+        }
     }
 }

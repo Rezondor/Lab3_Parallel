@@ -17,6 +17,7 @@ namespace Lab3
                 int[,] MultiplyMatrix2 = MatrixHelper.MultiplyMatrix_2(matrix1, matrix2);
                 int[,] MultiplyMatrix3 = MatrixHelper.MultiplyMatrix_3(matrix1, matrix2);
                 int[,] MultiplyMatrix_Only2 = MatrixHelper.MultiplyMatrix_Only2(matrix1, matrix2);
+                int[,] MultiplyMatrix_Only3 = MatrixHelper.MultiplyMatrix_Only3(matrix1, matrix2);
 
                 Console.WriteLine("1 матрица");
                 MatrixHelper.Print(matrix1);
@@ -32,6 +33,8 @@ namespace Lab3
                 MatrixHelper.Print(MultiplyMatrix3);
                 Console.WriteLine("Результат умножения двух матриц (Параллельно только для каждого элемента)");
                 MatrixHelper.Print(MultiplyMatrix_Only2);
+                Console.WriteLine("Результат умножения двух матриц (Параллельно только для нахождения суммы элементов)");
+                MatrixHelper.Print(MultiplyMatrix_Only3);
             }
             else
                 Console.WriteLine("Неверный размер матриц");
